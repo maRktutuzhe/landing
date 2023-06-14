@@ -19,6 +19,13 @@
     color: #ffffff;
 }
 
+input{
+    border: none;
+    outline:none;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+
+}
+
 section{
     position: relative;
 }
@@ -35,6 +42,16 @@ h2{
 }
 
 h3{
+    font-family: 'Yeseva';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #181818;
+}
+
+h4{
     font-family: 'Yeseva';
     font-size: 18px;
     font-weight: 400;
@@ -279,77 +296,346 @@ h1 span{
     text-align: center;
 }
 
-.online-control p{
-    font-family: 'Yeseva';
-    font-size: 20px;
-    text-align: center;
-    text-transform: uppercase;
+.online-control h3{
+    color: white;
 }
 
-.camera{
+.h3-img{
     margin-top: 12.8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 17.75vw;
+    padding-bottom: 30px;
 }
 
+.h3-img img+img{
+    margin-left: 8px;
+}
 
 /* VIDEO */
 
 .video{
-    width: 56.74vw;
-    left: 21.6vw;
-    height: 30.14vw;
-    background: #000;
+    padding-left: 21.6vw;
+    height: 30.14vw; 
+    background: linear-gradient(#131313 50%, white 50%);
     bottom: 15.69vw;
-
-}
-
-.video-img, .pause-img{
-    position: relative;
-    justify-content: center;
 }
 
 .pause-img{
-    left:23.65vw;
-    width: 10vw;
-    bottom: 20.5vw;
+    z-index: 3;
+    position: absolute;
+    margin-left: 23vw;
+    margin-top: 10vw;
 }
 
 .video-img{
+    position: absolute;
+    z-index: 2;
     width: 56.74vw;
     height: 30.14vw;
-    opacity: 0.6;
 }
 
-.pause-img:hover, .video-img:hover{
+.pause-img:hover{
     cursor: pointer;    
 }
 
+
 /* WHITE */
 
-.white{
-    bottom: 30.19vw;
-    background-color: rgb(125, 41, 41);
-    padding-top: 18.75vw;
-    color: #000;
-    z-index: -2;
-}
 
-.about-camera{
+/* BROADCAST (трансляция)*/ 
+
+.long-line{
+    padding-top: 4.3vw;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
-    
+    margin-bottom: 2.36vw;
 }
 
-.camera-text{
-    padding: 0 26vw ;
-    white-space: pre-line;
-    width: 100%;
-    font-size: 18px;
+.broadcast-text{
+    color:#363636;
+    display: flex;
+    text-align: center;
+    max-width: 681px;
+    margin: 0 auto;
     line-height: 37px;
+    font-size: 18px;
+    white-space: pre-line;
+    margin-bottom: 6.46vw;
+}
+
+.form-group input{
     color: #363636;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.name-phone input::placeholder{
+    color: #363636;
+}
+
+.form-group div{
+    color: #3636367f;
+    font-size: 14px;
+}
+
+.form-group{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.7vw;
+}
+
+.form-group li+li{
+    margin-left: 55px;
+}
+
+.submit-btn{
+    height: 51px;
+    width: 200px;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 27px;
+}
+
+.submit-btn:hover{
+    border: 1px solid #c68f35;
+    color: #c68f35;
+}
+
+
+/* CHECKBOX */ 
+
+.label {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10.2vw;
+}
+
+.checkbox{
+    display: none;
+}
+
+.fake{
+    display: inline-flex;
+    width: 18px;
+    height: 18px;
+    background: #E3B873;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.fake::before{
+    content:"\2714";
+    opacity: 0;
+    transition: .2s;
+}
+
+.checkbox:checked + .fake::before{
+    opacity: 1;
+}
+
+.agree-text{
+    color: #181818;
+    margin-left: 8.6px;
+}
+
+
+/* REPAIRS (ремонт) */
+
+
+.types-repair{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8.6vw
+}
+
+.types-repair>li+li{
+    margin-left: 30px;
+}
+
+.repair{
+    height: 608px;
+    width: 392px;
+}
+
+.repair img{
+    position: absolute;
+    z-index: 2;
+}
+
+.repair-information{
+    height: 286px;
+    width: 330px;
+    background-color: #fff;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 6px 5px 15px 5px rgba(0,0,0,0.22);
+    position: absolute;
+    z-index: 3;
+    margin-top: 294px;
+    margin-left: 31px;
+}
+
+.title{
+    color: #363636;
+    padding-top: 25px;
+    padding-left: 34px;
+    padding-bottom: 13px;
+}
+
+.services{
+    padding-left: 48px;
+    margin-bottom: 20px;
+}
+
+.services li{
+    list-style-type: disc;
+    color: #959595;
+    font-size: 13px;
+    line-height: 27px;
+}
+
+.price-btn{
+    width: 228px;
+    height: 54px;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.price-btn:hover{
+    background: #fff;
+    border: 1px solid #c68f35;
+    color: #c68f35;
+}
+
+
+/* MEASUREMENTS(замеры) */
+
+.measurements img{
+    position: absolute;
+    z-index: 1;
+}
+
+
+.points{
+    position: absolute;
+    z-index: 2;
+    padding-left: 241px;
+    padding-top: 109px;
+}
+
+.points p{
+    color: #363636;    
+    font-size: 14px;
+    line-height: 19px;
+    text-align: left;
+    white-space: pre-line;
+}
+
+.points li{
+    display: flex;
+    align-items: center;
+}
+
+.points li+li{
+    margin-top: 86px;
+}
+
+.point{
+    height: 57px;
+    width: 57px;
+    border-radius: 30px;
+    font-family: 'Yeseva';
+    font-size: 18px;
+    background: #E3B873;
+    color: #fff;
+    border: 8px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+    margin-right: 5px;
+}
+
+.request{
+    margin-left: 57.92vw;
+    margin-right: 7vw;
+    position: absolute;
+    margin-top: 7.36vw;
+}
+
+.request-form{
+    background: #131313;
+    padding-top: 28px;
+
+}
+
+.request-form p{
+    font-size: 18px;
+    line-height: 25.78px;
+    white-space: pre-line;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 39px;
+}
+
+.vertical{
+    flex-direction: column;
+    margin-left: 49px;
+    margin-bottom: 16px;
+    margin-right: 49px;
+    font-size: 14px;
+}
+
+.vertical .name-phone{
+    margin-top: 38px;
+}
+
+.vertical li+li{
+    margin-left: 0;
+}
+
+.vertical li:first-child{
+    margin-top: 0;
+}
+
+.vertical input{
+    color: #fff;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0);
+    width: 408px;
+}
+
+.vertical .name-phone input::placeholder{
+    color: #fff;
+}
+
+.vertical div{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.vertical .agree-text{
+    color: #fff;
+}
+
+.vertical label{
+    margin: 0;
+    justify-content: start;
+    margin-top: 6px;
+    margin-bottom: 39px;
+}
+
+.vertical .submit-btn{
+    width: 213px;
+}
+
+.vertical li:last-child{
+    justify-content: end;
+    display: flex;
+    margin-bottom: 27px;
 }
