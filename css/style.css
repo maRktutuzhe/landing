@@ -639,3 +639,32 @@ h1 span{
     display: flex;
     margin-bottom: 27px;
 }
+
+.pig-help p{
+    color:  rgb(227, 184, 114);
+    white-space: pre-line;
+    margin-left: 25px;
+}
+
+.pig-img{
+    background: rgb(227, 184, 114);
+    width: 72px;
+    border-radius: 72px;
+    display: flex;
+    height: 72px;
+    align-items: center;
+    justify-content: center;
+}
+
+.pig-help{
+    display: flex;
+    align-items: center;
+    margin-left: 31px;
+}
+
+
+/*  FANTASIES  */
+
+.fantasies-bg{
+    background: linear-gradient(109.8deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
